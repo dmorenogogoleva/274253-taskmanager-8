@@ -1,4 +1,5 @@
-'use strict';
+import './css/normalize.css';
+import './css/style.css';
 
 const filterContainer = document.querySelector(`.main__filter `);
 const cardContainer = document.querySelector(`.board__tasks`);
