@@ -1,6 +1,7 @@
 import getFilterButton from './scripts/getFilterButton';
 import getCard from './scripts/getCard';
 import {FILTER_TYPES, START_CARDS_COUNT} from './scripts/config';
+import getCardContent from './scripts/getCradContent';
 
 const filterContainer = document.querySelector(`.main__filter `);
 const cardContainer = document.querySelector(`.board__tasks`);
@@ -33,3 +34,4 @@ filterContainer.addEventListener(`click`, (evt) => {
 
 getFilterButtons();
 getCards();
+getCardContent();
