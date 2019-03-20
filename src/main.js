@@ -1,5 +1,3 @@
-import './css/normalize.css';
-import './css/style.css';
 import getFilterButton from './scripts/getFilterButton';
 import getCard from './scripts/getCard';
 import {FILTER_TYPES, START_CARDS_COUNT} from './scripts/config';
