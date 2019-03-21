@@ -19,7 +19,8 @@ const getFilterButtons = () => {
 const getCards = (num = START_CARDS_COUNT) => {
   const cards = [];
   for (let i = 0; i < num; i++) {
-    cards.push(getCard());
+    const content = getCardContent();
+    cards.push(getCard(content));
   }
   cardContainer.innerHTML = ``;
   cardContainer.insertAdjacentHTML(`beforeend`, cards.join(``));
@@ -34,4 +35,3 @@ filterContainer.addEventListener(`click`, (evt) => {
 
 getFilterButtons();
 getCards();
-getCardContent();

@@ -2,6 +2,7 @@ export const getRandomCount = (max) => Math.floor(Math.random() * max);
 
 export const START_CARDS_COUNT = 7;
 const DEFAULT_MAX_COUNT = 10;
+export const MILLISECONDS_IN_WEEK = 604800000;
 
 export const FILTER_TYPES = [
   {name: `all`, count: getRandomCount(DEFAULT_MAX_COUNT)},
@@ -13,4 +14,4 @@ export const FILTER_TYPES = [
   {name: `archive`, count: getRandomCount(DEFAULT_MAX_COUNT)}
 ];
 
-export const MILLISECONDS_IN_WEEK = 604800000;
+export const getRandomBool = () => Math.random() < 0.5;

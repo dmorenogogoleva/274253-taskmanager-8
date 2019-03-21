@@ -1,5 +1,7 @@
-export default () => `
-  <article class="card">
+export default (content) => {
+  const {title, hashtags, picture, color} = content;
+  return `
+  <article class="card card--${color}">
     <form class="card__form" method="get">
     <div class="card__inner">
     <div class="card__control">
@@ -18,7 +20,7 @@ export default () => `
     </div>
 
     <div class="card__color-bar">
-    <svg width="100%" height="10">
+    <svg class="card__color-bar-wave" width="100%" height="10">
     <use xlink:href="#wave"></use>
     </svg>
     </div>
@@ -29,8 +31,7 @@ export default () => `
     class="card__text"
     placeholder="Start typing your text here..."
     name="text"
-    >
-    This is example of new task, you can add picture, set date and time, add tags.</textarea
+    >${title}</textarea
     >
     </label>
     </div>
@@ -145,7 +146,7 @@ export default () => `
     </div>
 
     <div class="card__hashtag">
-    <div class="card__hashtag-list"></div>
+    <div class="card__hashtag-list">${[...hashtags].join(` `)}</div>
 
     <label>
       <input
@@ -161,11 +162,11 @@ export default () => `
     <label class="card__img-wrap card__img-wrap--empty">
     <input
     type="file"
-    class="card__img-input visually-hidden"
+    class="card__img-input"
     name="img"
     />
     <img
-    src="img/add-photo.svg"
+    src="${[picture]}"
     alt="task picture"
     class="card__img"
     />
@@ -247,3 +248,4 @@ export default () => `
     </form>
   </article>
   `;
+};
