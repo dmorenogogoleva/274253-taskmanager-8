@@ -35,3 +35,4 @@ filterContainer.addEventListener(`click`, (evt) => {
 
 getFilterButtons();
 getCards();
+getCardContent();
