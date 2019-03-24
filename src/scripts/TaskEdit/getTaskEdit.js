@@ -1,7 +1,7 @@
 export default (content) => {
   const {title, hashtags, picture, color, isRepeated} = content;
   return `
-  <article class="card card--${color} ${isRepeated && `card--repeat`}">
+  <article class="card card--edit card--${color} ${isRepeated && `card--repeat`}">
     <form class="card__form" method="get">
     <div class="card__inner">
     <div class="card__control">
@@ -27,11 +27,12 @@ export default (content) => {
 
     <div class="card__textarea-wrap">
     <label>
-    <p
+    <textarea
     class="card__text"
     placeholder="Start typing your text here..."
     name="text"
-    >${title}</p>
+    >${title}</textarea
+    >
     </label>
     </div>
 
