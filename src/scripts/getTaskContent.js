@@ -4,7 +4,7 @@ const TITLES = [`Изучить теорию`, `Сделать домашку`, 
 const COLORS = [`black`, `yellow`, `blue`, `green`, `pink`];
 const HASHTAGS = [`homework`, `theory`, `practice`, `intensive`, `keks`, `nodeschool`, `space`, `twitter`, `podcast`, `book`];
 
-const getCardContent = () => (
+const getTaskContent = () => (
   {
     title: getTitle(),
     dueDate: Date.now() - getRandomCount(MILLISECONDS_IN_WEEK),
@@ -40,4 +40,4 @@ const getHashtag = () => HASHTAGS[getRandomCount(HASHTAGS.length)];
 
 const getColor = () => COLORS[getRandomCount(COLORS.length)];
 
-export default getCardContent;
+export default getTaskContent;

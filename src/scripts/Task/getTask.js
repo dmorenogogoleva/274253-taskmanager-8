@@ -1,7 +1,7 @@
 export default (content) => {
-  const {title, hashtags, picture, color} = content;
+  const {title, hashtags, picture, color, isRepeated} = content;
   return `
-  <article class="card card--${color}">
+  <article class="card card--${color} ${isRepeated && `card--repeat`}">
     <form class="card__form" method="get">
     <div class="card__inner">
     <div class="card__control">

@@ -16,4 +16,4 @@ export const FILTER_TYPES = [
   {name: `archive`, count: getRandomCount(DEFAULT_MAX_COUNT)}
 ];
 
-export const getRandomBool = () => Math.random() < 0.5;
+export const getRandomBool = () => Math.random() < 0.2;
